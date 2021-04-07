@@ -10,6 +10,10 @@ html{
     box-sizing: inherit;
 }
 
+body{
+    font-family: "Open Sans";
+    color: #808080;
+}
 
 @import 'layout';
 @import 'headernav';
@@ -17,3 +21,4 @@ html{
 @import 'auth/signup';
 
 @import 'page-title';
+@import 'form-fields';
