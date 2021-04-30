@@ -18,7 +18,7 @@ export function fetchUserPurchases() {
                 _id: 0,
                 total: 19.40,
                 orderNumber: 'A0037543897',
-                orderDate: new Date(),
+                orderDate: new Date().toDateString,
                 creditCard: '-0000',
                 user: {
                     name: 'Jordan Hudgens',
@@ -30,7 +30,7 @@ export function fetchUserPurchases() {
                 _id: 1,
                 total: 1.38,
                 orderNumber: 'A0037515492',
-                orderDate: new Date(),
+                orderDate: new Date().toDateString,
                 creditCard: '-0000',
                 user: {
                     name: 'Maxwell Nelson',
@@ -42,7 +42,7 @@ export function fetchUserPurchases() {
                 _id: 2,
                 total: 1.30,
                 orderNumber: 'B0037543456',
-                orderDate: new Date(),
+                orderDate: new Date().toDateString,
                 creditCard: '-0000',
                 user: {
                     name: 'Jonas Mars',
@@ -54,7 +54,7 @@ export function fetchUserPurchases() {
                 _id: 3,
                 total: 19.40,
                 orderNumber: 'A0037543897',
-                orderDate: new Date(),
+                orderDate: new Date().toDateString,
                 creditCard: '-0000',
                 user: {
                     name: 'Marie Hudgens',
@@ -66,7 +66,7 @@ export function fetchUserPurchases() {
                 _id: 4,
                 total: 19.40,
                 orderNumber: 'G0537543291',
-                orderDate: new Date(),
+                orderDate: new Date().toDateString,
                 creditCard: '-0000',
                 user: {
                     name: 'Marissa Lopez',
@@ -78,7 +78,7 @@ export function fetchUserPurchases() {
                 _id: 5,
                 total: 19.40,
                 orderNumber: 'A0137543890',
-                orderDate: new Date(),
+                orderDate: new Date().toDateString,
                 creditCard: '-0000',
                 user: {
                     name: 'Kristine Hudgens',
@@ -90,7 +90,7 @@ export function fetchUserPurchases() {
                 _id: 6,
                 total: 20.20,
                 orderNumber: 'C6037543897',
-                orderDate: new Date(),
+                orderDate: new Date().toDateString,
                 creditCard: '-0000',
                 user: {
                     name: 'Jose Hernandez',
@@ -102,7 +102,7 @@ export function fetchUserPurchases() {
                 _id: 7,
                 total: 3.20,
                 orderNumber: 'A0037543897',
-                orderDate: new Date(),
+                orderDate: new Date().toDateString,
                 creditCard: '-0000',
                 user: {
                     name: 'Andrew Wild',
