@@ -1,4 +1,6 @@
-html{
+
+
+html {
     font-size: 62.5%;
 }
 
@@ -10,10 +12,11 @@ html{
     box-sizing: inherit;
 }
 
-body{
+body {
     font-family: "Open Sans";
     color: #808080;
 }
+
 
 @import 'layout';
 @import 'headernavbar';

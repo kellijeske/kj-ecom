@@ -1,5 +1,4 @@
-.sign-up{
-    height: 100vh;
+.sign-up {
     grid-row: content-s/content-e;
     grid-column: s/e;
 
@@ -31,16 +30,17 @@
     &__confirm {
         grid-row: confirm-s/confirm-e;
     }
-    &__line{
+
+    &__line {
         grid-row: line-s/line-e;
         border-top: 1px solid #ccc;
         margin-bottom: 24px;
     }
-    &__login{
+    &__login {
         grid-row: buttons-s/buttons-e;
         grid-column: create-s/create-e;
     }
-    &__back{
+    &__back {
         grid-row: buttons-s/buttons-e;
         grid-column: back-s/back-e;
     }
@@ -48,11 +48,5 @@
         grid-row: 1/-1;
         justify-self: end;
         align-self: start;
-
     }
 }
-
-.some-class {
-    color: red;
-}
-// empty classNames above

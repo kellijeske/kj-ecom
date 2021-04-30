@@ -1,9 +1,10 @@
-
 import React, { Component } from 'react';
+
 import { connect } from 'react-redux';
-import * as actions from '../../actions'
-import PurchaseHistory from './purchaseHistory';
+import * as actions from '../../actions';
+
 import AccountInformation from './accountInformation';
+import PurchaseHistory from './purchaseHistory';
 
 class Account extends Component {
 
@@ -11,12 +12,12 @@ class Account extends Component {
 
         const headerLinks = [
             {
-                _id:0,
+                _id: 0,
                 title: 'Shop',
                 path: '/shop'
             },
             {
-                _id:1,
+                _id: 1,
                 title: 'Logout',
                 path: '/'
             }
@@ -27,16 +28,15 @@ class Account extends Component {
                 _id: 0,
                 title: 'Purchase History',
                 active: true,
-                component: <PurchaseHistory />
+                component: <PurchaseHistory/>
             },
             {
                 _id: 1,
                 title: 'Account Information',
                 active: false,
-                component: <AccountInformation />
+                component: <AccountInformation/>
             }
         ]
-
 
         this.props.setHeaderLinks(headerLinks);
         this.props.setNavbarLinks(navbarLinks);
@@ -44,9 +44,9 @@ class Account extends Component {
 
     renderContent() {
         let jsx;
-        if(this.props.navbarLinks){
+        if(this.props.navbarLinks) {
             this.props.navbarLinks.forEach(link => {
-                if(link.active){
+                if(link.active) {
                     jsx = link.component;
                 }
             })
@@ -55,7 +55,7 @@ class Account extends Component {
     }
 
     render() {
-        return(
+        return (
             <div className='account'>
                 { this.renderContent() }
             </div>
@@ -64,10 +64,9 @@ class Account extends Component {
 }
 
 function mapStateToProps(state) {
-    const {headerLinks, navbarLinks} = state.headerNavbar;
-    return {headerLinks, navbarLinks}
+    const { headerLinks, navbarLinks } = state.headerNavbar;
+    return { headerLinks, navbarLinks }
 }
-
 
 Account = connect(mapStateToProps, actions)(Account);
 

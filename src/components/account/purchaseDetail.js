@@ -1,10 +1,8 @@
-
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 
-
-function PurchaseDetailLabel({className, title, value}){
-    return(
+function PurchaseDetailLabel({className, title, value}) {
+    return (
         <div className={`${className} purchase-detail-label`}>
             <div className='purchase-detail-label__title'>{title}</div>
             <div className='purchase-detail-label__value'>{value}</div>
@@ -12,52 +10,47 @@ function PurchaseDetailLabel({className, title, value}){
     )
 }
 
-//-----FOR REFERENCE-----
-// _id: 0,
+
 // total: 19.40,
-// orderNumber: 'A0037543897',
-// orderDate: new Date(),
 // creditCard: '-0000',
-// user: {
-//     name: 'Jordan Hudgens',
-//     shippingAddress: '1234 West State Street'
-// }
+
 
 class PurchaseDetail extends Component {
     render() {
         const { className, orderNumber, orderDate, user, total, creditCard } = this.props;
         const { name, shippingAddress } = user;
-
-        return(
+        const nameAddress = `${name}       ${shippingAddress}`
+        return (
             <div className={`${className} purchase-detail`}>
-                <PurchaseDetailLabel 
-                className='purchase-detail__order-number' 
-                title='Order Number'
-                value={orderNumber} />
-                <PurchaseDetailLabel 
-                className='purchase-detail__order-date' 
-                title='Order Date'
-                value={orderDate} />
-                <PurchaseDetailLabel 
-                className='purchase-detail__shipping' 
-                title='Shipping Address'
-                value={`${name}\n${shippingAddress}`} />
-
-                <PurchaseDetailLabel 
-                className='purchase-detail__total' 
-                title='Total'
-                value={total} />
-                <PurchaseDetailLabel 
-                className='purchase-detail__credit-card' 
-                title='Credit Card'
-                value={`${name}\n${creditCard}`} />
+                <PurchaseDetailLabel
+                 className='purchase-detail__order-number'
+                 title='Order Number'
+                 value={orderNumber}/>
+                <PurchaseDetailLabel
+                 className='purchase-detail__order-date'
+                 title='Order Date'
+                 value={orderDate}/>
+                <PurchaseDetailLabel
+                 className='purchase-detail__shipping-address'
+                 title='Shipping Address'
+                 value={nameAddress}/>
+                <PurchaseDetailLabel
+                 className='purchase-detail__total'
+                 title='Total'
+                 value={total}/>
+                <PurchaseDetailLabel
+                 className='purchase-detail__credit-card'
+                 title='Credit Card'
+                 value={creditCard}/>
+                 <a className='purchase-detail__track-shipment'>Track Shipment</a>
+                 <a className='purchase-detail__print-receipt'>Print Receipt</a>
             </div>
         )
     }
 }
 
 function mapStateToProps(state) {
-    const {purchaseDetail} =  state.user;
+    const { purchaseDetail } = state.user;
     return {
         ...purchaseDetail
     }

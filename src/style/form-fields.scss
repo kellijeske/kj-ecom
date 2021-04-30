@@ -1,18 +1,19 @@
 .form-input {
     display: grid;
     grid-gap: 6.5px;
-    
+
     & > * {
         padding-left: 20px;
     }
-    &__label{
+
+    &__label {
         font-size: 14px;
     }
-    &__input{
+    &__input {
         box-sizing: border-box;
         height: 39px;
         width: 426px;
-        border: 2px solid #E6E6E6;
+        border: 1px solid #E6E6E6;
         border-radius: 20px;
         color: #333333;
         font-size: 18px;
@@ -20,12 +21,12 @@
 }
 
 .form-button {
-    &__button{
+    &__button {
         height: 38px;
         width: 243px;
         border-radius: 20px;
         background-color: #00CB79;
-        
+
         font-size: 16px;
         color: white;
 
@@ -38,5 +39,4 @@
         background: #999;
         width: 137px;
     }
-    
 }

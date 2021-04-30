@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 
-
 class Details extends Component {
 
     renderChildren = () => {
@@ -12,15 +11,15 @@ class Details extends Component {
             })
         } else if(info) {
             children = info.map(item => {
-                return <div key={item._id} onClick={item.onClick} className='details__item' >{item.title}</div>
+                return <div key={item._id} className='details__item'>{item.title}</div>
             })
         }
         return children;
     }
 
-    render(){
-        const { className, title} = this.props;
-        return(
+    render() {
+        const { className, title } = this.props;
+        return (
             <div className={`${className} details`}>
                 <div className='details__title'>{title}</div>
                 <div className='details__links'>
@@ -34,6 +33,3 @@ class Details extends Component {
 }
 
 export default Details;
-
-
-
