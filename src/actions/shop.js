@@ -1,13 +1,22 @@
 import { 
     // SET_SHOP_CATEGORIES 
     SET_NAVBAR_LINKS,
-    SET_SHOP_PRODUCTS
+    SET_SHOP_PRODUCTS,
+    FILTER_PRODUCTS_WITH_CATEGORY_ID,
+    SET_SHOP_CATEGORIES
 } from './types';
 
 
+export function filterProductsWithCategoryId(_id) {
+    return({
+        type: FILTER_PRODUCTS_WITH_CATEGORY_ID,
+        payload: _id
+    })
+}
+
 export function fetchShopCategories(){
     return({
-        type: SET_NAVBAR_LINKS,
+        type: SET_SHOP_CATEGORIES,
         payload: [
             {
                 _id: 0,
@@ -38,6 +47,8 @@ export function fetchShopCategories(){
                 title: 'Ruby'
             }
         ]
+        
+        
     })
 }
 
