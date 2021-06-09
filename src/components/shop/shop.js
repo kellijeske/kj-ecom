@@ -45,7 +45,7 @@ class Shop extends Component {
                                     {product.title}
                                 </div>
                                 <div className='shop-product__description'>
-                                    {prodect.description}
+                                    {product.description}
                                 </div>
                             </div>
                         )
