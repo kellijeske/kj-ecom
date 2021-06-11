@@ -4,7 +4,7 @@ import React, {Component} from 'react';
 import {reduxForm, Field} from 'redux-form';
 
 
-function FormSeachBar(props){
+function FormSearchBar(props){
     return(
         <input className={`${props.className} form-search-bar`} {...props.input} type='text' placeholder={props.placeholder} />
     )
