@@ -39,7 +39,6 @@ class Shop extends Component {
     render() {
         return (
             <div className='shop'>
-            shop...
             {/* - shop search bar */}
             <ShopSearchBar onSubmit={this.onSubmit} className='shop__search-bar' />
             {/* - shop product */}
